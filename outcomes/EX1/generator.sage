@@ -1,8 +1,9 @@
 class Generator(BaseGenerator):
     def data(self):
         x = var('x')
-        a = randrange(-9,10)
-        b = randrange(-9,10)
+        a,b = sample(range(1,10),2)
+        a = choice([-1,1])*a
+        b = choice([-1,1])*b
         p = randrange(2,6)
 
         return {
