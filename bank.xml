@@ -20,5 +20,13 @@ Simplify the sum of two monomials.
 Example of generating graphics.
             </description>
         </outcome>
+        <outcome>
+            <title>Sample Outcome 2</title>
+            <slug>EX2</slug>
+            <path>outcomes/EX2</path>
+            <description>
+Simplify the sum of two monomials.
+            </description>
+        </outcome>
     </outcomes>
 </bank>
