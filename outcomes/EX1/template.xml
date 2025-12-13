@@ -1,9 +1,44 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding="UTF-8"?>
 <knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
+
+  <intro>
+    <p>Evaluate each of the following functions for the requested values.</p>
+  </intro>
+  
+  <knowl>
     <content>
-        <p>Simplify <m>{{sum}}</m>.</p>
+      <p>
+        Find <m>{{f_eval_str}}</m> for 
+        <m>{{f_x_latex}}</m>.
+      </p>
     </content>
     <outtro>
-        <p><m>{{result}}</m></p>
+      <p>{{answer_A}}</p>
     </outtro>
-</knowl>
+  </knowl>
+
+  <knowl>
+    <content>
+      <p>
+        Find <m>g(-x)</m> for 
+        <m>{{g_x_latex}}</m>.
+      </p>
+    </content>
+    <outtro>
+      <p><m>{{answer_B}}</m></p>
+    </outtro>
+  </knowl>
+
+  <knowl>
+    <content>
+      <p>
+        Find <m>h({{eval_point_h}})</m> for
+        <m>{{h_x_latex}}</m>.
+      </p>
+    </content>
+    <outtro>
+      <p><m>{{answer_C}}</m></p>
+    </outtro>
+  </knowl>
+
+  </knowl>

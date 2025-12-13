@@ -5,11 +5,11 @@
     <url>https://checkit.clontz.org</url>
     <outcomes>
         <outcome>
-            <title>Sample Outcome</title>
-            <slug>EX1</slug>
+            <title>Evaluating Functions</title>
+            <slug>FN-1</slug>
             <path>outcomes/EX1</path>
             <description>
-Simplify the sum of two monomials.
+Evaluate a given function for a requested value.
             </description>
         </outcome>
         <outcome>
