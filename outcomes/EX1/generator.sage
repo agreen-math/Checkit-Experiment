@@ -1,15 +1,17 @@
+from sage.all import *
+
 class Generator(BaseGenerator):
     def data(self):
+        # Define fixed point values (Update these later if needed)
+        POINTS_A = 5
+        POINTS_B = 8
+        POINTS_C = 6
+
         # Initialize a dictionary to hold ALL generated parameters and answers
         data_dict = {}
 
-        # 1. Define symbolic variables (must be done once, early)
-        # CORRECTED: Use tuple unpacking (x,) to safely get the single variable
-        try:
-            (x,) = CheckIt.vars('x') 
-        except NameError:
-            x = SR.var('x') 
-
+        # 1. Define symbolic variables
+        x = var('x') 
         data_dict['x'] = x
         
         # Define ranges for parameters
@@ -28,30 +30,22 @@ class Generator(BaseGenerator):
         while c == b * a:
             c = choice(range_c)
         
-        # Define expressions for numerator and denominator
-        num_expr = Integer(b) * x - Integer(c)
-        den_expr = x - Integer(a)
+        f_x = (Integer(b) * x - Integer(c)) / (x - Integer(a))
         
-        # Define the function for internal use (if needed later), but rely on string building for LaTeX output
-        f_x = num_expr / den_expr
-        
-        # *** START: Force Display-Style Fraction via string building ***
-        # 1. Convert numerator and denominator to LaTeX strings.
-        num_latex = latex(num_expr)
-        den_latex = latex(den_expr)
-        
-        # 2. Manually construct the string using \dfrac{...}{...}
+        # Force Display-Style Fraction via string building
+        num_latex = latex(Integer(b) * x - Integer(c))
+        den_latex = latex(x - Integer(a))
         f_x_latex = f"f(x) = \\dfrac{{{num_latex}}}{{{den_latex}}}"
-        # *** END: Force Display-Style Fraction ***
-
+        
         # Store results for Part A
         data_dict.update({
             "a": a, "b": b, "c": c,
-            "f_x_latex": f_x_latex, # This variable now holds the manually constructed \dfrac string
+            "f_x_latex": f_x_latex, 
             "f_eval_str": f"f({a})",
             "answer_A": "Undefined",
+            "points_A": POINTS_A,
         })
-        
+
         # =================================================================
         # 3. --- Part B: Evaluate g(-x) for g(x) = sqrt(ax^2 + dx + b) ---
         # =================================================================
@@ -73,6 +67,7 @@ class Generator(BaseGenerator):
             "a_g": a_g, "b_g": b_g, "d_g": d_g,
             "g_x_latex": f"g(x) = {latex(g_x)}",
             "answer_B": latex(g_neg_x_expr),
+            "points_B": POINTS_B,
         })
         
         # =================================================================
@@ -114,6 +109,7 @@ class Generator(BaseGenerator):
             "h_x_latex": h_x_latex,
             "eval_point_h": eval_point_h,
             "answer_C": answer_C,
+            "points_C": POINTS_C,
         })
         
         return data_dict

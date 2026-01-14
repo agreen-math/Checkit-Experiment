@@ -1,0 +1,30 @@
+\documentclass[11pt,addpoints]{exam} %
+
+% Modular Boilerplate from your Admin folder
+\input{Admin/1. Packages} %
+\input{Admin/2. Course Info} %
+\input{Admin/3. Outcomes} %
+\input{Admin/4. Commands} %
+
+% Ensure SageTeX is available for CheckIt's math processing
+\usepackage{sagetex} 
+
+\begin{document}
+
+\addpoints %
+\noprintanswers %
+
+% Modular Cover Page
+\input{Admin/6. CoverPage} %
+\newpage
+
+\begin{questions} %
+
+{{CONTENT}} % This is where CheckIt will inject your template.xml parts
+
+\headerbox{Bonus Question}
+\input{Admin/7. Extra Credit} %
+
+\end{questions}
+
+\end{document}

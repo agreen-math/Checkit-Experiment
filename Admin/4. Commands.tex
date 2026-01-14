@@ -1,0 +1,38 @@
+% --- Departmental Switch ---
+\newif\ifstandards
+\standardstrue % Default to ON for your personal use. Change to \standardsfalse for the Department Final.
+
+% Redefine headerbox to respect the switch
+\let\oldheaderbox\headerbox
+\renewcommand{\headerbox}[1]{\ifstandards\oldheaderbox{#1}\fi}
+
+%%%%%%%%%% Horizontal Lines
+\definecolor{primaryColor}{cmyk}{.92,.18,.94,.61} % MC Green (Pantone 357)
+\definecolor{secondaryColor}{cmyk}{.13,.05,0,.44} % MC Gray (Pantone 430)
+\newcommand{\primaryline}{\noindent{\color{primaryColor}\rule{\textwidth}{.2em}}}
+\newcommand{\blankpage}{%
+    \newpage
+    \thispagestyle{empty}
+    \begin{center}
+        \textbf{\large This page may be used for scratch paper.\\
+        No work on this page will be assessed.}
+    \end{center}
+    \newpage
+}
+
+%%%%%%%%%% Header Box
+\newcommand{\headerbox}[1]{%
+    \uplevel{\begin{tcolorbox}[
+        colback=lightgray!30,
+        colframe=black,
+        width=\textwidth,
+        boxrule=1pt,
+        arc=0pt,
+        auto outer arc,
+        center upper
+    ]
+        {\fontsize{\dimexpr\the\fontdimen6\font+2pt}{\dimexpr\the\fontdimen6\font+4pt}\selectfont
+        \textbf{\MakeUppercase{#1}}}
+    \end{tcolorbox}}
+}
+

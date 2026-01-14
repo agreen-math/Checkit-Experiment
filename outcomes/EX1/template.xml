@@ -2,43 +2,31 @@
 <knowl mode="exercise" xmlns="https://spatext.clontz.org" version="0.2">
 
   <intro>
-    <p>Evaluate each of the following functions for the requested values.</p>
+    <p>\headerbox{\oca}</p> 
+    <p>Evaluate the following functions for the requested values:</p>
+    <p>\begin{parts}</p>
   </intro>
   
   <knowl>
     <content>
-      <p>
-        Find <m>{{f_eval_str}}</m> for 
-        <m>{{f_x_latex}}</m>.
-      </p>
+      <p>\part[{{points_A}}] Find <m>{{f_eval_str}}</m> for the function defined by <m>{{f_x_latex}}</m>.</p>
     </content>
-    <outtro>
-      <p>{{answer_A}}</p>
-    </outtro>
+    <outtro><p>Undefined</p></outtro>
   </knowl>
 
   <knowl>
     <content>
-      <p>
-        Find <m>g(-x)</m> for 
-        <m>{{g_x_latex}}</m>.
-      </p>
+      <p>\part[{{points_B}}] Find the simplified expression for <m>g(-x)</m> given <m>{{g_x_latex}}</m>.</p>
     </content>
-    <outtro>
-      <p><m>{{answer_B}}</m></p>
-    </outtro>
+    <outtro><p><m>{{answer_B}}</m></p></outtro>
   </knowl>
 
   <knowl>
     <content>
-      <p>
-        Find <m>h({{eval_point_h}})</m> for
-        <m>{{h_x_latex}}</m>.
-      </p>
+      <p>\part[{{points_C}}] Find <m>h({{eval_point_h}})</m> for the piecewise function <m>h(x)</m> defined by <m>{{h_x_latex}}</m>.</p>
+      <p>\end{parts}</p>
     </content>
-    <outtro>
-      <p><m>{{answer_C}}</m></p>
-    </outtro>
+    <outtro><p><m>{{answer_C}}</m></p></outtro>
   </knowl>
 
-  </knowl>
+</knowl>
