@@ -3,30 +3,21 @@
 
   <intro>
     <p>\headerbox{\oca}</p> 
-    <p>Evaluate the following functions for the requested values:</p>
-    <p>\begin{parts}</p>
+    <p>\question Evaluate the following functions for the requested values:</p>
+    <p>\begin{enumerate}</p>
   </intro>
   
-  <knowl>
-    <content>
-      <p>\part[{{points_A}}] Find <m>{{f_eval_str}}</m> for the function defined by <m>{{f_x_latex}}</m>.</p>
-    </content>
-    <outtro><p>Undefined</p></outtro>
-  </knowl>
+  <content>
+      <p>\part [{{points_A}}] Find <m>{{f_eval_str}}</m> for the function defined by <m>{{f_x_latex}}</m>.</p>
+      <p>\begin{solution} {{answer_A}} \end{solution}</p>
 
-  <knowl>
-    <content>
-      <p>\part[{{points_B}}] Find the simplified expression for <m>g(-x)</m> given <m>{{g_x_latex}}</m>.</p>
-    </content>
-    <outtro><p><m>{{answer_B}}</m></p></outtro>
-  </knowl>
+      <p>\part [{{points_B}}] Find the simplified expression for <m>g(-x)</m> given <m>{{g_x_latex}}</m>.</p>
+      <p>\begin{solution} <m>{{answer_B}}</m> \end{solution}</p>
 
-  <knowl>
-    <content>
-      <p>\part[{{points_C}}] Find <m>h({{eval_point_h}})</m> for the piecewise function <m>h(x)</m> defined by <m>{{h_x_latex}}</m>.</p>
-      <p>\end{parts}</p>
-    </content>
-    <outtro><p><m>{{answer_C}}</m></p></outtro>
-  </knowl>
+      <p>\part [{{points_C}}] Find <m>h({{eval_point_h}})</m> for the piecewise function defined by <m>{{h_x_latex}}</m>.</p>
+      <p>\begin{solution} <m>{{answer_C}}</m> \end{solution}</p>
+      
+      <p>\end{enumerate}</p>
+  </content>
 
 </knowl>

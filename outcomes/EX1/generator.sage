@@ -42,7 +42,7 @@ class Generator(BaseGenerator):
             "a": a, "b": b, "c": c,
             "f_x_latex": f_x_latex, 
             "f_eval_str": f"f({a})",
-            "answer_A": "Undefined",
+            "answer_A": r"\text{Undefined}",
             "points_A": POINTS_A,
         })
 
